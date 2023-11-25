@@ -10,7 +10,12 @@
     <input id="name" type="text"  formControlName="name">
 
     <label for="positionid">Position:</label>
-    <input id="positionid" type="text"  formControlName="positionid">
+
+    <select id="positionid" formControlName="positionid">
+        <option value=""></option>
+        <option *ngFor = "let position of positions" [value]="position.id"></option>
+    </select>
+    <!-- <input id="positionid" type="text"  formControlName="positionid"> -->
 
     <label for="appearances">Appearances:</label>
     <input id="appearances" type="text" formControlName="appearances">
