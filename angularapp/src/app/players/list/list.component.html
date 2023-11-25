@@ -15,11 +15,18 @@
             <td>{{p.id}}</td>
             <td>{{p.shirtno}}</td>
             <td>{{p.name}}</td>
-            <td>{{p.}}</td>
-            <td>{{p.id}}</td>
-            <td>{{p.id}}</td>
-            <td>{{p.id}}</td>
+            <td>{{p.position?.name}}</td>
+            <td>{{p.appearances?}}</td>
+            <td>{{p.goals}}</td>
+            <td>
 
+                <button id="edit"></button>
+                <button ></button>
+                <button id="delete" (click)="deletePlayer(p.id)">Delete</button>
+
+
+            </td>
+           
 
 
         </tr>

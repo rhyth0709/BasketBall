@@ -12,7 +12,19 @@ export class ListComponent implements OnInit {
 
 
   players:Player[] = []
+ mockPlayers:Player[] = [
+    { id: 1, shirtno: 10, name: 'Player 1'},
+    { id: 2, shirtno: 7, name: 'Player 2' },
+  ]
   constructor(private ps:PlayersService,private pos:PositionsService) { }
+
+
+  deletePlayer(id:number):void{
+    this.ps.deletePlayer(id).subscribe(()=>{
+      console.log("Player Deleted Sucessfully")
+    })
+
+  }
 
   ngOnInit(): void {
 
