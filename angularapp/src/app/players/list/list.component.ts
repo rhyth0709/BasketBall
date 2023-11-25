@@ -12,8 +12,8 @@ export class ListComponent implements OnInit {
 
 
   players:Player[] = []
-
-  constructor(private ps:PlayersService,private pos:PositionsService) { }
+  
+  constructor(private ps:PlayersService) { }
 
 
   deletePlayer(id:number):void{

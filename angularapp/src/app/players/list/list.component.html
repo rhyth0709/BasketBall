@@ -10,7 +10,7 @@
         <th>Actions</th>
     </thead>
     <tbody>
-        <tr *ngFor="let p of Players">
+        <tr *ngFor="let p of players">
 
             <td>{{p.id}}</td>
             <td>{{p.shirtno}}</td>
@@ -20,9 +20,9 @@
             <td>{{p.goals}}</td>
             <td>
 
-                <button id="edit"></button>
-                <button>View</button>
-                <button id="delete" (click)="deletePlayer(p.id)">Delete</button>
+                <button id="edit" (click)="deletePlayer(p.id)">Edit</button>
+                <a href="#" [routerLink]="['/players/',p.id,'details']">View</a>
+                 <button id="delete" (click)="deletePlayer(p.id)">Delete</button>
 
 
             </td>
