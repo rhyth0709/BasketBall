@@ -12,10 +12,7 @@ export class ListComponent implements OnInit {
 
 
   players:Player[] = []
- mockPlayers:Player[] = [
-    { id: 1, shirtno: 10, name: 'Player 1'},
-    { id: 2, shirtno: 7, name: 'Player 2' },
-  ]
+
   constructor(private ps:PlayersService,private pos:PositionsService) { }
 
 
@@ -26,11 +23,15 @@ export class ListComponent implements OnInit {
 
   }
 
+  
+
   ngOnInit(): void {
 
+    
     this.ps.getPlayers().subscribe((data)=>{
       this.players.push(...data)
     })
+  
   }
 
 }

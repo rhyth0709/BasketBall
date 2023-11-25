@@ -16,12 +16,12 @@
             <td>{{p.shirtno}}</td>
             <td>{{p.name}}</td>
             <td>{{p.position?.name}}</td>
-            <td>{{p.appearances?}}</td>
+            <td>{{p.appearances}}</td>
             <td>{{p.goals}}</td>
             <td>
 
                 <button id="edit"></button>
-                <button ></button>
+                <button>View</button>
                 <button id="delete" (click)="deletePlayer(p.id)">Delete</button>
 
 
@@ -33,10 +33,10 @@
     </tbody>
 </table>
 
-<!-- id:number
+ <!--id:number
     shirtno : number
     name : string
     positionid?:number
     appearances?:number
     goals?:number
-    position?:Position -->
+    position?:Position --> 
