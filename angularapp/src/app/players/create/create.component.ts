@@ -28,6 +28,15 @@ export class CreateComponent implements OnInit {
    onSubmit(formData:FormGroup):void{
 
 
+    if(formData.valid)
+    {
+      const p = formData.value
+      this.ps.createPlayer(p).subscribe(()=>{
+        console.log("Added Successfully")
+      })
+    }
+
+
    }
 
   
