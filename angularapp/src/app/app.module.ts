@@ -6,11 +6,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavMenuComponent } from './nav-menu/nav-menu.component';
 import { CreateComponent } from './players/create/create.component';
+import { ListComponent } from './players/list/list.component';
 @NgModule({
   declarations: [
     AppComponent,
     NavMenuComponent,
-    CreateComponent
+    CreateComponent,
+    ListComponent
   ],
   imports: [
     BrowserModule,
